@@ -13,7 +13,7 @@ w, err := repo.Update(ctx, id, new(issuez.Edit).SetState("closed"), actor, issue
 page, err := repo.Query(ctx, issuez.Query{Labels: []string{"bug"}, Order: issuez.SortUpdated})
 ```
 
-See [the embedding guide](https://github.com/EuroZig/git-native-issuez/blob/v0.4.0/docs/embedding.md) for exact-tip reads,
+See [the embedding guide](https://github.com/EuroZig/git-native-issuez/blob/v0.5.0/docs/embedding.md) for exact-tip reads,
 text-version preconditions, external image storage, staged imports, and
 how to handle a committed write whose reload fails.
 
@@ -25,7 +25,7 @@ is all it takes. Builds need cgo and a C compiler, and Linux builds for musl
 (Alpine) need `-tags musl`.
 
 ```sh
-go get github.com/EuroZig/git-native-issuez-go/issuez@v0.4.0
+go get github.com/EuroZig/git-native-issuez-go/issuez@v0.5.0
 ```
 
 Cross-compiling needs a C compiler for the target; `zig cc` works:
